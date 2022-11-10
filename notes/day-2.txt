@@ -1,0 +1,20 @@
+1. callback - asynchronous programming in JS
+
+Promise => 
+
+state=> pending/resolved/rejected
+result=> the result/output  of the execution
+
+resolve(value)
+reject(reason)
+
+property
+readyState: 0 (create)
+readyState: 1 (open)
+readyState: 2 (send/server has received the request)
+readyState: 3 (server processing the request)
+readyState: 4 (received response)
+
+event => readystatechange
+
+
