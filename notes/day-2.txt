@@ -17,4 +17,53 @@ readyState: 4 (received response)
 
 event => readystatechange
 
+Node JS: by default uses common js format
+module => single JS/TS file
+
+module formats:
+	a. Common JS format:
+		module.exports/require()
+
+	b. ES6 module format:
+		export/import
+
+	c. Asynchronous Module definition format (AMD)
+		define([],function(){
+			const add = ....
+			const subtract = ...
+		})
+
+	d. Universal Module definition format (UMD)
+
+module loaders:
+requirejs (understands AMD format), systemjs, commonjs
+
+issue:
+JS code writtem using latest features should be converted to vanila JS
+code written using other format must be converted to AMD format
+
+for JS code:
+babel => transpiler (transformation compiler)
+
+for TS code:
+tsc => transpiler
+
+
+bower, yarn etc.
+npm: node package mnager
+>npm init => create package.json file
+
+npm inistall @babel/core @babel/cli -D
+
+babel plugins:
+	a. ES6+ features => vanila JS
+		arrow fn =>
+		class => 
+
+babel presets:
+	array of plugins => 
+		
+	
+
+
 

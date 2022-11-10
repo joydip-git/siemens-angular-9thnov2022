@@ -1,4 +1,6 @@
-const createRows = (allPosts) => {
+import { PostManager } from "./manager/post-manager";
+
+const createRows = function (allPosts) {
     const tbody = document.getElementById('tbodyPosts')
 
     for (const post of allPosts) {
@@ -15,24 +17,21 @@ const createRows = (allPosts) => {
     }
 }
 
-window.addEventListener(
-    'DOMContentLoaded',
-    function () {
-        const btn = this.document.getElementById('btnLoad')
-        btn.addEventListener(
-            'click',
-            async function () {
-                const manager = new PostManager()
-                try {
-                    const posts = await manager.fetchPosts()
-                    const finalPosts = posts.slice(0, 10)
-                    createRows(finalPosts)
 
-                } catch (e) {
-                    console.log(e.message)
-                }
-            }
-        )
+const btn = document.getElementById('btnLoad')
+btn.addEventListener(
+    'click',
+    async function () {
+        console.log('button clicked')
+        const manager = new PostManager()
+        try {
+            const posts = await manager.fetchPosts()
+            const finalPosts = posts.slice(0, 10)
+            createRows(finalPosts)
+
+        } catch (e) {
+            console.log(e.message)
+        }
     }
 )
 

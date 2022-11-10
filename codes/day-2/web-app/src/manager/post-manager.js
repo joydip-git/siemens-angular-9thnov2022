@@ -1,4 +1,7 @@
-class PostManager {
+import { Post } from "../models/post";
+import { PostService } from "../services/post-service"
+
+export class PostManager {
     constructor() {
         this.postService = new PostService()
     }

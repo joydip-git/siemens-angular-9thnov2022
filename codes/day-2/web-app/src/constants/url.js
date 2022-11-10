@@ -1,1 +1,1 @@
-const postUrl = 'https://jsonplaceholder.typicode.com/posts'
+export const postUrl = 'https://jsonplaceholder.typicode.com/posts'
