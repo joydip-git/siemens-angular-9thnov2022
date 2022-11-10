@@ -62,7 +62,129 @@ babel plugins:
 
 babel presets:
 	array of plugins => 
+
+code: 
+	JS as a language
+modularity: 
+	ES6 module format
+
+application artifacts:
+	module loader
+	package.json
+	installing transpilers
+	installing app dev server (lite-server)
+	etc.
 		
+Angular:
+	client-side framework
+	facility
+		- to create component based appliaction
+		- binding (data and event) to pass data to and from code to view
+		- dependency injection
+		- reusable piece of code using service
+		- routing feature
+		- passing data between components
+		- change tracking
+
+Angular CLI tool:
+	> npm install @angular/cli -g
+
+Node JS installation path:
+c:\Program Files\nodejs
+
+3rd s/w tools installed using NPM:
+C:\Users\joydip\AppData\Roaming\npm
+
+assets:
+	component => export class AppComponent{} [with design]
+
+	directive => export class AppDirective{}
+	service => export class AppService{}
+	pipe => export class AppPipe{}
+	angular module => export class AppModule{}
+
+decorator function:
+	targets: class, class properties, function arguments
+
+	@Component()
+	export class AppComponent{}
+
+	@Directive()
+	export class AppDirective{}
+
+	@Injectable()
+	export class AppService{
+		fetchData(){}
+	}
+
+	@Pipe()
+	export class AppPipe{
+		transform(data:string):string{
+			return data.toUpperCase()
+		}
+	}
+
+	@NgModule()
+	export class AppModule{}
+
+	@Component()
+	export class AppComponent{
+		@Input() data
+		@Output() fired
+	}
+
+	@Component()
+	export class AppComponent{
+
+		@Input() data
+		@Output() fired
+
+		constructor(@Inject() svc:AppService){}
+	}
+	
+
+data binding:
+code => view 
+	{{ class-property }} => interpolation
+
+feature modules:
+	products module
+		=> 2/3 components, 1/2 services, 1/2 pipes, 1/2 directives
+	payment module
+		=> 1/2 components, 2 services, 2 pipes, 2 directives
+	order module
+	cart module
+	delivery module
+
+grouping mechanism of assets: angular module => is used to register some assets to be logically part of a feature module
+
+@NgModule({
+	
+})
+export class ProdcuctsModule{}
+
+@NgModule({
+	
+})
+export class PaymentModule{}
+
+@NgModule({
+	//registering components, directives and pipes (Not other modules or services)
+  declarations: [],
+	//registerng services
+  providers:[],
+	//regsiter modules
+  imports:[],
+})
+export class AppModule{}
+	
+									Loaded into angular runtime
+									Root Module
+
+childmodule1		childmodule2		childmodule3 ....................
+component1			component2			component3
+pipe1				pipe2				pipe3
+service1			service2			service3
 	
 
 

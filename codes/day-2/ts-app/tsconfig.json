@@ -1,0 +1,13 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "dist",
+        "module": "AMD",
+        "target": "ES5",
+        "lib": [
+            "DOM",
+            "ES2015"
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "ts-app",
+  "version": "1.0.0",
+  "description": "ts app",
+  "main": "index.js",
+  "scripts": {
+    "transpile": "tsc",
+    "load": "lite-server"
+  },
+  "author": "joy",
+  "license": "ISC",
+  "dependencies": {
+    "requirejs": "^2.3.6"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^4.8.4"
+  }
+}
