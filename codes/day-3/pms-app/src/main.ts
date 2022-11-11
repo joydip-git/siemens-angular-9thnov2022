@@ -8,5 +8,12 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+// setTimeout(
+//   () => {
+console.log('Going to load App module')
+const platform = platformBrowserDynamic()
+platform.bootstrapModule(AppModule)
   .catch(err => console.error(err));
+//   },
+//   2000
+// )

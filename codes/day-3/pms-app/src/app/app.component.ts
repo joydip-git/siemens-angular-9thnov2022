@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pms-app';
+  title = 'Product Management System';
+  constructor() {
+    console.log('App component created')
+  }
 }
