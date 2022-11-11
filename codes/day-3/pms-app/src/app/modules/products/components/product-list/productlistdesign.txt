@@ -1,0 +1,14 @@
+<div>
+    <label for="txtName">Name:&nbsp;</label>
+    <!-- <input type="text" placeholder="enter product name here" name="txtName" id="txtName" value="{{productName}}" #pname
+        [style.width.px]="width"> -->
+    <input type="text" placeholder="enter product name here" name="txtName" id="txtName" value="{{productName}}" #pname
+        [style.width.px]="width" (change)="changeProductName(pname.value)">
+    &nbsp;&nbsp;
+
+    <!-- <input type="button" value="Submit" id="btnSubmit" class="btn btn-primary"
+        (click)="changeProductName(pname.value)" /> -->
+</div>
+<p>
+    {{ productName }}
+</p>

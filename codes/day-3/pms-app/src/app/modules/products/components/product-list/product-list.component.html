@@ -1,14 +1,30 @@
-<div>
-    <label for="txtName">Name:&nbsp;</label>
-    <!-- <input type="text" placeholder="enter product name here" name="txtName" id="txtName" value="{{productName}}" #pname
-        [style.width.px]="width"> -->
-    <input type="text" placeholder="enter product name here" name="txtName" id="txtName" value="{{productName}}" #pname
-        [style.width.px]="width" (change)="changeProductName(pname.value)">
-    &nbsp;&nbsp;
-
-    <!-- <input type="button" value="Submit" id="btnSubmit" class="btn btn-primary"
-        (click)="changeProductName(pname.value)" /> -->
+<div class="row">
+    <div class="md-2">
+        Filter By:&nbsp;<input type="text" value="{{searchText}}" (change)="updateSearchText(search.value)" #search>
+    </div>
 </div>
-<p>
-    {{ productName }}
-</p>
+<br>
+<div *ngIf="products">
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of (products|productfilter:searchText)">
+                <td>
+                    <div class="img-responsive">
+                        <img src="{{p.imageUrl}}" alt="NA" title="{{p.productName}}" class="imgStyle">
+                    </div>
+                </td>
+                <td>{{p.productName|uppercase}}</td>
+                <td>{{p.price|currency:'INR'}}</td>
+                <td>{{p.starRating}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

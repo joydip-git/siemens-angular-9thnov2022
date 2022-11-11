@@ -51,4 +51,23 @@ One-way binding:
 
 two-way binding:
 <HTML-element (event-name) ="method-of-component(args)" [attribute] ="data">
+
+directive: classes, expands/adds behavior to the element
+	structural: decides the structure of the template/design
+		ngFor, ngSwitch, ngIf, ngIfElse
+	attribute directive: used like any regular attribute of HTML element
+		ngClass, ngStyle
+	component directive: directive with view, used like a custom HTML tag
+		
+
+data|uppercase
+data|pipe-name:value1:valu2:value3.....
+
+@Pipe({
+	name:'uppercase'
+})
+export class UpperCasePipe{
+	transform(value:any,){
+	}
+}
 	
