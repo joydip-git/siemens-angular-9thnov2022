@@ -1,0 +1,37 @@
+1. callback, promise, async and await and fetch() api
+2. few new features in JS: soread operator, rest operator, oject destructuring etc.
+3. modules in JS
+	a. modules
+	b. module formats
+	c. module loaders
+	d. why modules do not work by default in browser but in node js?
+	e. how to supply a module loader to an web app written using ES6 module format?
+
+4. transpilation
+	converting ES6+ features in JS back to vanilla JS (<ES6)
+	convert other module formats to AMD format
+
+5. transpiler s/w:
+	a. JS => babel
+		i. core packages: @babel/core, @bable/cli
+		ii. plugins: @bable/....
+		iii. presets (array/collections of plugins): @babel/preset-env (all plugins required to transpile ES6+ code)
+		iv. configurauon: .babelrc
+	b. TS => typescript (tsc)
+		i. core package: typescript
+		ii. configurauon: tsconfig.json
+
+6. building an web app using JS and HTML
+7. typescript language
+8. building an web app using TS and HTML
+9. angular
+	i. tool: angular cli (>npm i @angular/cli -g )
+	ii. create new angular app: >ng new <app-name>
+10. angular components and other assets (directive, pipe, service, module)
+11. main.ts file (bootstrappe file)
+12. Module (registration of assets)
+
+
+define(['./...'],function(){
+	function add(a,b){return a+b}
+})

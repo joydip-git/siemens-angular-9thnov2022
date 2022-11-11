@@ -1,0 +1,19 @@
+{
+  "name": "js-web-app",
+  "version": "1.0.0",
+  "description": "simple js web app",
+  "main": "index.js",
+  "scripts": {
+    "load": "lite-server",
+    "transpile": "tsc"
+  },
+  "author": "joydip",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "requirejs": "^2.3.6"
+  }
+}

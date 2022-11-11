@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "dist",
+        "module": "AMD",
+        "target": "ES3",
+        "lib": [
+            "DOM"
+        ]
+    }
+}
