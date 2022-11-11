@@ -67,7 +67,43 @@ data|pipe-name:value1:valu2:value3.....
 	name:'uppercase'
 })
 export class UpperCasePipe{
-	transform(value:any,){
+	transform(value:any, ...args:any[]){
 	}
 }
+
+
+
+Service registration:
+	1. is the service instance is exclusively consumed by an asset: register at component level
+	2. is the service instance is exclusively consumed by assets of a particular child module: register at child module level
+	3. is the service instance is exclusively consumed by assets of the entire application: register at root  module level
+
+
+
+routes:
+
+	default: /home => home
+	home: /home => Home
+
+
+	products: /products => PLC
+			   /products/id =>PDC
+
+	none: page-not-found
+
+classes:
+Route => {path:'products', component:PLC}
+Routes => Route[]
+
+service:
+Router, 
+ActivatedRoute
+
+directives:
+router-outlet
+routerLink
+		
+
+
+
 	

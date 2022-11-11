@@ -17,7 +17,7 @@
         <tbody>
             <tr *ngFor="let p of (products|productfilter:searchText)">
                 <td>
-                    <div class="img-responsive">
+                    <div class="img-responsive" [routerLink]="['/products',p.productId]">
                         <img src="{{p.imageUrl}}" alt="NA" title="{{p.productName}}" class="imgStyle">
                     </div>
                 </td>
