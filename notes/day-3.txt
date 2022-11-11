@@ -35,3 +35,20 @@
 define(['./...'],function(){
 	function add(a,b){return a+b}
 })
+
+
+
+Angular binding:
+One-way binding:
+1. code => view: data binding
+	a. interpolation: <HTML-element attribute ="{{ data }}">
+	b. property binding: <HTML-element [attribute] ="data">
+
+2. view => code: event binding
+	<HTML-element (event-name) ="method-of-component(args)">
+
+	code: method-of-component(params){}
+
+two-way binding:
+<HTML-element (event-name) ="method-of-component(args)" [attribute] ="data">
+	
